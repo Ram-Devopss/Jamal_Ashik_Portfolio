@@ -1,0 +1,43 @@
+{
+  "profileImage": "/Jamal_Ashik_Portfolio/images/profile.jpg",
+  "profileAlt": "Photo of Fernando Aldair López Ponce (EFEELE) for the blog",
+  "profileLink": "/Jamal_Ashik_Portfolio/about-me",
+  "profileTitle": "",
+  "profileName": "Jamal Ashik",
+  "github": "https://github.com/Ram-Devopss",
+  "githubText": "Do you like this blog's design?",
+  "portfolioImage": "/Jamal_Ashik_Portfolio/images/portfolio.jpg",
+  "sld_1":"/Jamal_Ashik_Portfolio/images/sld_1.jpg",
+  "sld_2":"/Jamal_Ashik_Portfolio/images/sld_2.jpg",
+  "sld_3":"/Jamal_Ashik_Portfolio/images/sld_3.jpg",
+  "email": "ramdevops@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/ramdevops/",
+  "instagram": "https://www.instagram.com/hello.ramm/",
+  "youtube": "https://www.youtube.com/@efeeledev",
+  "alias": "EFEELE",
+  "contactSectionTitle": "Ready to take your idea to the next level?",
+  "contactSectionSubtitle": "Let's work together.",
+  "contactSectionButtonText": "Contact Me",
+  "contactSectionButtonIcon": "paperplane",
+  "techsTitle": "TECHS",
+  "instagramIconName": "instagram",
+  "youtubeIconName": "youtube",
+  "githubIconName": "github",
+  "linkedinIconName": "linkedin",
+  "emailIconName": "whatsapp",
+  "phone" :"https://wa.me/qr/6ZQO2G7RVUTSH1",
+  "hobbies": [
+    "Writing",
+    "Camping",
+    "Coffee",
+    "Music",
+    "Movies",
+    "Board Games"
+  ],
+  "pageTitle": "Jamal Ashik",
+  "pageDescription": "Is a modern, minimalist template crafted for developers and digital creatives.",
+  "OGImage": {
+    "url": "/Jamal_Ashik_Portfolio/images/imagedefault.webp",
+    "alt": ""
+  }
+}

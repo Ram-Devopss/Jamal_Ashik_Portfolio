@@ -1,0 +1,269 @@
+---
+import Button from "../ui/Button.astro";
+import Heading from "../ui/Heading.astro";
+import Tools from "../portfolio/Tools.astro";
+import { Icon } from "astro-icon/components";
+import Hobbies from "../portfolio/Hobbies.astro";
+import { getCollection } from "astro:content";
+
+const [staticData] = await getCollection("staticData");
+const {
+  profileAlt,
+  profileLink,
+  profileImage,
+  profileName,
+  profileTitle,
+  email,
+  phone,
+  emailIconName,
+  sld_1,
+  sld_2,
+  sld_3,
+  github,
+  portfolioImage,
+  contactSectionButtonText,
+} = staticData.data;
+---
+
+
+<section
+  class="scroll-m-16 px-8 max-sm:px-4 py-8"
+  id="home"
+  aria-label="Professional profile and introduction"
+>
+  <!-- Profile + Top Card -->
+  <div
+    class="mx-auto mb-4 h-96 w-full max-w-7xl rounded-2xl bg-linear-to-r from-mint-300 dark:from-mint-600 to-mint-50 dark:to-mint-200/5 hover:to-mint-300/30 dark:hover:to-mint-600/30 p-[.2rem] max-md:h-auto"
+  >
+    <div
+      class="group relative z-0 flex h-full items-center justify-center gap-8 overflow-hidden rounded-2xl bg-linear-to-tr from-riptide-100 to-white p-4 transition-all hover:shadow-[0_10px_50px_rgba(13,188,130,0.2)] dark:bg-linear-to-r dark:from-mint-950 dark:to-zinc-950 dark:overflow-hidden max-md:w-full max-md:gap-3 max-lg:gap-2 max-sm:flex-col dark:before:bg-[radial-gradient(circle,rgba(13,188,130)_0,rgba(1,45,34)_100%)] before:bg-[radial-gradient(circle,rgba(95,255,202)_0,rgba(144,253,210)_100%)] before:absolute before:left-65 before:top-10 before:h-[40%] before:aspect-square before:rounded-full before:blur-3xl before:opacity-80 before:-z-10 before:transition hover:before:animate-pulse"
+    >
+      <!-- Profile Image -->
+      <div class="aspect-square h-4/5 max-md:size-32">
+        <div
+          class="group-hover:scale-105 relative z-10 flex w-full cursor-pointer items-center overflow-hidden rounded-full p-[2px] transition-all duration-500"
+        >
+          <div
+            class="absolute inset-0 h-full w-full rounded-full from-transparent to-riptide-500 dark:from-transparent dark:to-mint-300 animate-rotate-border bg-conic/[from_var(--border-angle)]"
+          ></div>
+          <div class="relative z-20 flex w-full rounded-full bg-mint-900 p-1">
+            <div
+              class="w-full aspect-square rounded-full bg-top bg-cover"
+              style={{ backgroundImage: `url(${profileImage})` }}
+              aria-label={profileAlt}
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile Info -->
+      <div
+        class="flex h-full w-7/12 flex-col justify-center gap-4 p-4 max-md:w-full max-md:gap-2"
+      >
+        <span
+          class="relative inline-flex items-center text-xs font-semibold leading-0 dark:text-white text-blacktext max-md:font-medium max-sm:justify-center"
+        >
+          <span
+            class="before:mr-2 before:block before:h-1.5 before:w-1.5 before:rounded-full before:bg-green-400 before:shadow-[0px_0px_0px_3px_rgba(34,197,94,0.5)] before:animate-pulse before:content-['']"
+          ></span>
+          Available for work
+        </span>
+
+        <h1
+          class="text-4xl font-black leading-none text-blacktext dark:text-white max-xl:text-3xl max-lg:text-2xl max-sm:text-center"
+        >
+          {profileName}
+        </h1>
+      <small class="bg-linear-to-r from-riptide-400 to-mint-400 dark:from-riptide-200 dark:to-mint-400 text-transparent bg-clip-text">
+  Bsc., M.ACU., 
+  <span class="overline decoration-2 decoration-black dark:decoration-black">
+    LLB
+  </span>
+</small>
+
+
+     <p
+  class="mb-0 text-lg font-semibold leading-8 text-blacktext dark:text-gray-200 max-xl:text-base"
+>
+  Founder ~ 
+  <span
+    class="bg-linear-to-r from-riptide-500 to-mint-500 bg-clip-text font-black text-transparent dark:from-riptide-300 dark:to-mint-200"
+  >
+    THE CHANGE DPCP & ADVERTISMENT GROUP
+  </span>
+</p>
+<small class="mb-0 text-lg font-semibold leading-8 text-blacktext dark:text-gray-200 max-xl:text-base">(Data Driven political Campaign in practice) DPCP</small>
+
+        <p
+          class="mb-0 text-lg font-semibold leading-8 text-blacktext dark:text-gray-200 max-xl:text-base"
+        >
+          <span
+            class="bg-linear-to-r from-riptide-500 to-mint-500 bg-clip-text font-black text-transparent dark:from-riptide-300 dark:to-mint-200"
+          >
+            {profileTitle}
+          </span>
+          <br />
+          Passionate about politics, surveying, coordinating people
+          <br />
+          <span
+            class="bg-linear-to-r from-riptide-500 to-mint-500 bg-clip-text font-black text-transparent dark:from-riptide-300 dark:to-mint-200"
+          >
+            (From Vision to Victory – We Manage the Path)
+          </span>
+        </p>
+
+        <div class="flex gap-4 max-sm:flex-col max-sm:items-center">
+          <Button
+            link={phone}
+            text={contactSectionButtonText}
+            iconName={emailIconName}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Journey Slider Section -->
+<div
+  class="mx-auto mt-8 max-w-6xl rounded-2xl bg-linear-to-r from-mint-300 dark:from-mint-600 to-mint-50 dark:to-mint-200/5 p-[.2rem] hover:to-mint-300/30 dark:hover:to-mint-600/30"
+>
+  <article
+    class="group relative flex flex-col items-center text-center justify-start overflow-hidden rounded-2xl bg-linear-to-br from-riptide-100 to-white dark:from-mint-950 dark:to-zinc-950 p-10 transition-all hover:shadow-[0_20px_50px_rgba(13,188,130,0.4)] max-md:p-6"
+  >
+    <!-- Heading -->
+    <h3
+      class="text-3xl font-extrabold bg-linear-to-r from-riptide-500 to-mint-500 bg-clip-text text-transparent dark:from-riptide-300 dark:to-mint-200 mb-6"
+    >
+      My Journey Highlights
+    </h3>
+
+  <!-- Image Slider -->
+<!-- Image Slider -->
+<div class="relative w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] xl:h-screen overflow-hidden">
+  <div class="slider-container w-full h-full">
+    <div
+      class="slider-wrapper flex transition-transform duration-700 ease-in-out h-full"
+      id="sliderWrapper"
+    >
+      <div class="slider-item w-full flex-shrink-0 h-full">
+        <img
+          src={sld_1}
+          alt="Slide 1"
+          class="w-full h-full object-contain"
+        />
+      </div>
+      <div class="slider-item w-full flex-shrink-0 h-full">
+        <img
+          src={sld_2}
+          alt="Slide 2"
+          class="w-full h-full object-contain"
+        />
+      </div>
+      <div class="slider-item w-full flex-shrink-0 h-full">
+        <img
+          src={sld_3}
+          alt="Slide 3"
+          class="w-full h-full object-contain"
+        />
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Prev Button -->
+  <button
+    onclick="prevSlide()"
+    class="absolute left-4 top-1/2 -translate-y-1/2 text-white border border-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center hover:bg-white/10 hover:scale-110 transition"
+  >
+    ‹
+  </button>
+
+  <!-- Next Button -->
+  <button
+    onclick="nextSlide()"
+    class="absolute right-4 top-1/2 -translate-y-1/2 text-white border border-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center hover:bg-white/10 hover:scale-110 transition"
+  >
+    ›
+  </button>
+</div>
+
+  
+  </article>
+  
+</div>
+<!-- About Me Section -->
+<div class="mx-auto mt-10 max-w-4xl px-6 text-center">
+  <h3
+    class="text-3xl font-extrabold bg-linear-to-r from-riptide-500 to-mint-500 bg-clip-text text-transparent dark:from-riptide-300 dark:to-mint-200 mb-6"
+  >
+    About Me
+  </h3>
+
+  <!-- Highlighted Card for Experience -->
+  <div
+    class="rounded-xl bg-linear-to-r from-riptide-50 to-mint-50 dark:from-mint-900/40 dark:to-zinc-900/40 shadow-md p-6 mb-6"
+  >
+    <p class="text-lg font-semibold text-blacktext dark:text-white mb-4">
+      Community organizer & public service professional with 6+ years of experience. 
+      Skilled in organizing and coordinating impactful public events such as:
+    </p>
+
+    <ul
+      class="text-left list-disc list-inside text-base text-blacktext dark:text-gray-300 space-y-2"
+    >
+      <li>Protests</li>
+      <li>Medical Campaigns</li>
+      <li>Blood Donation Camps</li>
+      <li>Public Meetings</li>
+    </ul>
+  </div>
+
+  <!-- Proven Abilities -->
+  <div
+    class="rounded-xl bg-linear-to-r from-mint-50 to-riptide-50 dark:from-zinc-900/40 dark:to-mint-900/40 shadow-md p-6"
+  >
+    <p class="text-lg font-semibold text-blacktext dark:text-white mb-4">
+      Proven ability to:
+    </p>
+
+    <ul
+      class="text-left list-disc list-inside text-base text-blacktext dark:text-gray-300 space-y-2"
+    >
+      <li>Engage with communities</li>
+      <li>Mobilize volunteers</li>
+      <li>Address the public on key concerns</li>
+    </ul>
+  </div>
+  <br>
+  <p class="bg-linear-to-r from-riptide-500 to-mint-500 bg-clip-text font-black text-transparent dark:from-riptide-300 dark:to-mint-200">
+     <strong> Skilled in Planning, Communication and Coordinating people to create a meaningful social impacts.</strong>
+    </p>
+</div>
+
+
+<!-- JS for Slider -->
+<script>
+  let currentIndex = 0;
+  const slides = document.querySelectorAll(".slider-item");
+  const sliderWrapper = document.getElementById("sliderWrapper");
+  const totalSlides = slides.length;
+
+  function showSlide(index) {
+    sliderWrapper.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    showSlide(currentIndex);
+  }
+
+  // Auto slide every 4 seconds
+  setInterval(nextSlide, 4000);
+</script>
+
+
+</section>
